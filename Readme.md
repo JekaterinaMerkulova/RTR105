@@ -67,7 +67,7 @@ int main ()
         fclose (pFile);
         return 0;
 }                   
-                                                30.11.2020
+                                                30.11.2020/07.01.2021
                                                 
 http://gnuplot.respawned.com/
 # Scale font and line width (dpi) by changing the size! It will always display stretched.
@@ -82,4 +82,28 @@ set samples 50
 set style data points
 plot [-7:7] cosh(x/2)
 set title 'Some Data'
-plot  "data.txt" using 1:2 title 'Col-Force' with lines, "data.txt" using 1:3 title 'Beam-Force' with linespoints
+
+                                                07.01.2021
+
+ norakstīts uz JSLinux
+localhost:~# ls -lt
+total 24
+-rw-r--r--    1 root     root           300 Jan  7 16:08 data.txt
+-rw-r--r--    1 root     root           349 Jan  7 15:59 script1.gp
+-rw-r--r--    1 root     root           151 Jul  5  2020 readme.txt
+-rw-r--r--    1 root     root           114 Jul  5  2020 bench.py
+-rw-r--r--    1 root     root            76 Jul  3  2020 hello.c
+-rw-r--r--    1 root     root            22 Jun 26  2020 hello.js
+localhost:~# cat script1.gp
+# Scale front and line width (dpi) by changing the size! It will always display
+stretched.
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10butt solid
+set output 'out.svg'
+ 
+# Key mens label...
+set title "Intersection of f(x) = cosh(x/2) D.a.: x=R"
+set xlabel 'X'
+set ylabel 'Y'
+set samples 50
+set style data points
+plot [-7:7] cosh(x/2)
