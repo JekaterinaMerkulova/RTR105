@@ -1,4 +1,5 @@
- #include <stdio.h>
+PU1: 40 000 000 000
+#include <stdio.h>
 int main()
 {
     long int a;
