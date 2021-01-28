@@ -65,6 +65,61 @@ int main()
 }
 
 
+PU4:while + factorial
+
+
+#include <stdio.h>
+
+int main()
+{
+    long int a,c,b,ll,n;
+    printf("Ievadiet vienu decimāldaļskaitli: ");
+    scanf("%ld",&n);
+    printf("Izvēlētiet datu tipu(char-c; int-b; long long-ll)\n: ");
+    scanf("%ld",&a);
+    
+    int i,factorial;
+    factorial=1;
+    if(a=c, n>=1, n<=12)
+        {
+         printf("Atvainojiet, ar 'char' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=ll, n>=1, n<=12)
+        {
+         printf("Atvainojiet, ar 'long long' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=b, n>=1, n<=12)
+    {
+     for(i=1; i<=n; i++)
+        {
+         factorial = factorial * i;
+        }
+     printf("Faktoriāls no ievadītā skaitļa (%ld) ir : %d",n,factorial);
+    }
+    
+    if(a=c, n>=13)
+        {
+         printf("Atvainojiet, ar 'char' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=ll, n>=13)
+        {
+         printf("Atvainojiet, ar 'long long' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=b, n>=13)
+    {
+     for(i=1; n>=13; i++)
+        {
+         printf("Faktoriāls no ievadītā skaitļa: Faktoriālam nav vērtības\n");
+         break;
+        }
+    }
+    return 0;
+}
+
+
+
+
+
 
                                                            26.11.2020
 
