@@ -13,6 +13,59 @@ int main()
     return 0;
 }
 
+PU4:while + factorial
+
+#include <stdio.h>
+
+int main()
+{
+    long int a,c,b,ll,n;
+    printf("Ievadiet vienu decimāldaļskaitli: ");
+    scanf("%ld",&n);
+    printf("Izvēlētiet datu tipu(char-c; int-b; long long-ll)\n: ");
+    scanf("%ld",&a);
+    
+    int i,f;
+    f=i=1;
+    if(a=c, n>=1, n<=12)
+        {
+         printf("Atvainojiet, ar 'char' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=ll, n>=1, n<=12)
+        {
+         printf("Atvainojiet, ar 'long long' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=b, n>=1, n<=12)
+    {
+     while(i<=n)
+        {
+         f*=i;
+         i++;
+        }
+     printf("Faktoriāls no ievadītā skaitļa (%ld) ir : %d",n,f);
+    }
+    
+    if(a=c, n>=13)
+        {
+         printf("Atvainojiet, ar 'char' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=ll, n>=13)
+        {
+         printf("Atvainojiet, ar 'long long' datu tipu pareizi aprēķināt faktoriālu nav iespējams\n");
+        }
+    if(a=b, n>=13)
+    {
+     while(n>=13)
+        {
+         printf("Faktoriāls no ievadītā skaitļa: Faktoriālam nav vērtības\n");
+         break;
+        }
+    }
+    return 0;
+}
+
+
+
                                                            26.11.2020
 
  GNU nano 4.9.3                    filie_write.c                               
