@@ -65,7 +65,7 @@ int main()
 }
 
 
-PU4:while + factorial
+PU5:for + factorial
 
 
 #include <stdio.h>
