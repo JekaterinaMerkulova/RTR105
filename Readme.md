@@ -1,4 +1,6 @@
-PU1: 40 000 000 000
+                           Programmēšanas uzdevumi.
+
+    PU1: 40 000 000 000
 #include <stdio.h>
 int main()
 {
@@ -8,15 +10,85 @@ int main()
     scanf("%ld", &a);
     printf("Ievadiet 2. skaitli: ");
     scanf("%ld", &b);
-    printf("%ld * %ld = %ld ", a,b,a*b);
-    
-    return 0;
+    printf("%ld * %ld = %ld ", a,b,a*b); 
+return 0;
 }
 
-PU4:while + factorial
-
+    PU2: dec2bin
 #include <stdio.h>
+int main()
+{
+ char a[10],n,i;
+ printf("Ievadiet vienu decimāldaļskaitli: ");
+ scanf("%d",&n);
+ for(i=0;n>0;i++)
+ {
+  a[i]=n%2;
+  n=n/2;
+ }
+ printf("\nBinārais skaitlis no ievadītā ir: ");
+ for(i=i-1;i>=0;i--)
+ {
+  printf("%d",a[i]);
+ }
+return 0;
+} 
 
+    PU3: if + simple sort
+#include <stdio.h>
+int main()
+{
+ int skait_1; //Skaitlis Nr.1
+ int skait_2; //Skaitlis Nr.2
+ int skait_3; //Skaitlis Nr.3
+ char s;
+
+ printf("ievadiet skait_1: ");
+ scanf("%d", &skait_1);
+ printf("ievadiet skait_2: ");
+ scanf("%d", &skait_2);
+ printf("ievadiet skait_3: ");
+ scanf("%d", &skait_3);
+ printf("ievadiet skaitlu augošā secībā - a ; dilstošā - d \n");
+ scanf("%s", &s);
+ 
+ printf("ja ievaditājs simbols ir a(%d), tad: \n", s=='a');
+ if(s=='a')
+ {
+  if(skait_1>skait_2>skait_3)
+  {
+    printf("%d %d %d \n", skait_1, skait_2, skait_3);
+  }
+  else if(skait_3>skait_2>skait_1)
+  {
+   printf("%d %d %d \n", skait_3, skait_2, skait_1);
+  }
+  else if(skait_3>skait_1>skait_2)
+  {
+   printf("%d %d %d \n", skait_3, skait_1, skait_2);
+  }
+ }
+ printf("ja ievaditājs simbols ir d(%d), tad: \n", s=='d');
+ if(s=='d')
+ {
+  if(skait_1<skait_2<skait_3)
+  {
+   printf("%d %d %d \n", skait_1, skait_2, skait_3);
+  }
+  else if(skait_3<skait_2<skait_1)
+  {
+   printf("%d %d %d \n", skait_3, skait_2, skait_1);
+  }
+  else if(skait_3<skait_1<skait_2)
+  {
+   printf("%d %d %d \n", skait_3, skait_1, skait_2);
+  }
+ }
+return 0;
+}
+
+    PU4: while + factorial
+#include <stdio.h>
 int main()
 {
     long int a,c,b,ll,n;
@@ -61,15 +133,11 @@ int main()
          break;
         }
     }
-    return 0;
+return 0;
 }
 
-
-PU5:for + factorial
-
-
+    PU5: for + factorial
 #include <stdio.h>
-
 int main()
 {
     long int a,c,b,ll,n;
@@ -113,12 +181,122 @@ int main()
          break;
         }
     }
-    return 0;
+return 0;
 }
 
+    PU6: user defined function
 
+    N1-bez argumentiem un bez return
+#include <stdio.h>
+void skaitlu_paarbaude();
 
+int main()
+{
+ skaitlu_paarbaude(); //bez argumentiem
+ return 0; //bez return
+}
+void skaitlu_paarbaude()
+{
+ int n, i, flag=0;
+ printf("Ievadiet pozitīvu veselu skaitli: ");
+ scanf("%d",&n);
+ for(i=2; i<=n/2; i++)
+ {
+  if(n%i==0)
+  {
+   flag=1;
+  }
+ }
+if (flag==1)
+ printf(" %d nav pamata skaitlis.", n);
+else
+ printf(" %d ir pamata skaitlisr.", n);
+}
 
+    N2-ar argumentiem un bez return
+#include <stdio.h>
+void priekshskatiijuma_un_displeja_paarbaude(int n);
+
+int main()
+{
+ int n;
+ printf("Ievadiet pozitīvu veselu skaitli: ");
+ scanf("%d",&n);//n-arguments
+ priekshskatiijuma_un_displeja_paarbaude(n);
+return 0;//bez return
+}
+void priekshskatiijuma_un_displeja_paarbaude(int n)
+{
+ int i, flag = 0;
+ for(i=2; i<=n/2; ++i)
+ {
+  if(n%i==0)
+  {
+   flag=1;
+   break;
+  }
+ }
+if(flag == 1)
+ printf(" %d nav pamata skaitlis.",n);
+else
+ printf(" %d ir pamata skaitlis.", n);
+}
+
+    N3-bez argumentiem un ar return
+#include <stdio.h>
+int ieguut_veselu_skaitli();
+
+int main()
+{
+ int n, i, flag=0; //bez argumentiem
+ n = ieguut_veselu_skaitli();
+ for(i=2; i<=n/2; ++i)
+ {
+  if(n%i==0){
+  flag = 1;
+  break;
+ }
+}
+if (flag == 1)
+ printf(" %d nav pamata skaitlis.", n);
+else
+ printf(" %d ir pamata skaitlis.", n);
+return 0;
+}//ar return
+int ieguut_veselu_skaitli()
+{
+ int n;
+ printf("Ievadiet pozitīvu veselu skaitli: ");
+ scanf("%d",&n);
+return n;
+}
+
+    N4-ar argumentiem un ar return
+#include <stdio.h>
+int skaitlu_paarbaude(int n);
+
+int main()
+{
+ int n, flag;
+ printf("Ievadiet pozitīvu veselu skaitli: ");
+ scanf("%d",&n); //n-arguments un ar return
+ flag = skaitlu_paarbaude(n);
+ if(flag == 1)
+  printf(" %d nav pamata skaitlis",n);
+ else
+  printf(" %d ir pamata skaitlis",n);
+return 0;
+}
+int skaitlu_paarbaude(int n)
+{
+ int i;
+ for(i=2; i<=n/2; i++)
+ {
+  if(n%i == 0)
+  return 1;
+ }
+return 0;
+} 
 
 
                                                            26.11.2020
@@ -192,7 +370,7 @@ set style data points
 plot [-7:7] cosh(x/2)
 set title 'Some Data'
 
-                                                07.01.2021
+                                                07.01.2021-...
 
  norakstīts uz JSLinux
 localhost:~# ls -lt
