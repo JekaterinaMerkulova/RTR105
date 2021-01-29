@@ -184,7 +184,7 @@ int main()
 return 0;
 }
 
-    PU6: user defined function
+    PU6: user defined function(N1,N2,N3,N4)
 
     N1-bez argumentiem un bez return
 #include <stdio.h>
